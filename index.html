@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Pop up -->
+    <div class="contact-us-btns-div">
+      <!-- Use any element to open the sidenav toggle btn -->
+      <span id="pop-up-support-btn" onclick="openNav()"
+        ><i class="fa fa-question" aria-hidden="true"></i
+      ></span>
+    </div>
+
+    <!-- add content here -->
+    <div id="pop-up-nav" class="pop-up-nav hidden">
+      <!-- header -->
+      <div class="pop-up-nav-heading-close-button">
+        <a
+          href="javascript:void(0)"
+          class="pop-up-closebtn"
+          onclick="closeNav()"
+          >×</a
+        >
+      </div>
+      <div class="pop-up-nav-heading">Contact Us</div>
+      <div class="pop-up-intro">
+        <div>You can reach us through the following channels:</div>
+        <div>
+          Our operating hours are Monday to Friday: 8:00 AM - 4:30 PM (SAST)
+        </div>
+      </div>
+      <!-- content -->
+      <div class="pop-up-nav-heading">
+        <p>Learning Hub Support</p>
+      </div>
+      <div class="pop-up-nav-content">
+        <!-- email -->
+        <p>
+          <i class="fa fa-envelope" aria-hidden="true">&nbsp;</i
+          ><a href="mailto:Learninghub@sun.ac.za" target="_blank"
+            >Learninghub@sun.ac.za</a
+          >
+        </p>
+        <!-- contact -->
+        <p>
+          <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;<a
+            href="tel:021 918 4138"
+            target="_blank"
+            >021 918 4138</a
+          >
+        </p>
+      </div>
+      <div class="pop-up-nav-heading">
+        <p>Technical Support</p>
+      </div>
+      <div class="pop-up-nav-content">
+        <!-- email -->
+        <p>
+          <i class="fa fa-envelope" aria-hidden="true"></i
+          ><a href="https://bpcict.sun.ac.za/" target="_blank"
+            >https://bpcict.sun.ac.za/</a
+          >
+        </p>
+        <!-- contact -->
+        <p>
+          <i class="fa fa-phone" aria-hidden="true"></i>&nbsp;&nbsp;<a
+            href="tel:021 918 4247"
+            target="_blank"
+            >021 918 4247</a
+          >
+        </p>
+      </div>
+    </div>
+    <script>
+      /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+      function openNav() {
+        document.getElementById("pop-up-nav").classList.remove("hidden");
+        document.getElementById("pop-up-nav").style.width = "250px";
+        document.getElementById("pop-up-support-btn").style.display = "none";
+      }
+      /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+      function closeNav() {
+        document.getElementById("pop-up-nav").classList.add("hidden");
+        document.getElementById("pop-up-nav").style.width = "0px";
+        document.getElementById("pop-up-support-btn").style.display = "block";
+      }
+    </script>
+  </body>
+</html>
